@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0px;padding:0px;}
+          li{
+              background:yellow;margin:10px;width:100px;height:60px;margin-left:100px;list-style:none;
+              line-height:60px;text-align: center;
+            }
+         div{background:red;width:140px;height:100px;margin:50px auto;line-height:100px;text-align: center}
+    </style>
+    <script>
+         window.onload=function(){
+             var aLi=document.getElementsByTagName('li');
+             var oDiv=document.getElementById('div1');
+             var i=0;
+
+
+             for  (var i=0;i<aLi.length;i++){
+                     aLi[i].ondragstart=function(){    //拖拽开始即可执行
+                            this.style.background='green';
+                     };
+                     aLi[i].ondragend=function(){    //拖拽结束执行
+                            this.style.background='yellow';
+                     };
+                     /*aLi[i].ondrag=function(){    //拖拽中执行
+                            document.title=i++;
+                     };*/
+                        oDiv.ondragenter=function() {//拖拽进入目标元素后,相当于onmouseover
+                            this.style.background = 'black';
+                         };
+                         oDiv.ondragleave=function(){//拖拽离开目标元素后，相当于onmouseout
+                          this.style.background='yellow';
+                         };
+                         oDiv.ondragover=function(ev){//ondragenter和ondragleave之间触发,如果要触发drop，必须先阻止默认事件
+                           //document.title = i++;
+
+                             ev.preventDefault();
+                         };
+                         oDiv.ondrop=function(){//
+                            alert('213');
+                         };
+
+                 }
+             };
+
+
+
+    </script>
+</head>
+<body>
+     <ul>
+            <li draggable="true">drag1</li>
+            <li draggable="true">drag2</li>
+            <li draggable="true">drag3</li>
+     </ul>
+<div id="div1">
+    目标元素
+</div>
+</body>
+</html>

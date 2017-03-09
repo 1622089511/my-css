@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.main {        
+           float: left;       
+           width: 100%;
+           background: red;
+           height: 500px;    
+ 			} 
+ 			.sub {       
+           float: left;        
+           width: 100px;        
+           margin-left: -100%; 
+           background: greenyellow;
+           height: 100px; 
+           position: relative;        
+           left: -100px;  
+           }      
+           .extra {        
+             float: left;        
+             width: 100px;        
+             margin-left: -100px;  
+             background: darkblue;
+             height: 100px; 
+              position: relative;        
+             right: -100px;   
+             }
+             .wrap{
+             	padding:0 100px;
+             }
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			  <div class="main">主</div>
+              <div class="sub">左</div>        
+              <div class="extra">多余</div>
+        </div>    	
+	</body>
+</html>

@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+.font_hn(){    //混合2，类名后带()，则编译后该条混合在css隐藏
+  color:red;
+  font-family: "Microsoft New Tai Lue";
+}
+h1{
+  font-size:18px;
+  .font_hn;   //混合1：加CLASS名
+}
+h2{
+  font-size:16px;
+  .font_hn;   //混合1：加CLASS名
+}
+
+//混合3：带选择器的混合
+.my-hover-mixin(){    //带括号编辑到css后则隐藏
+  &:hover{
+    border:1px solid red;
+  }
+}
+h1,h2{
+  .my-hover-mixin();
+}
+//混合4：带参数的混合
+@green:green;
+  //定义
+.boder(@color){
+  border:1px solid @color;
+}
+  //使用
+h1{
+  &:hover{
+    .boder(@green);
+  }
+}
+h2{
+  .boder(black);
+}
+
+//混合5：带参数并且有默认值
+.boder(@color:red){
+   border:1px solid @color;
+}
+h1{
+  .boder;
+}
+h2{
+  .boder(yellow);
+}
+
+//混合6，多个参数
+.font(@font:20px,@back:#fff,@height:80px)
+{
+  font-size:@font;
+  background:@back;
+}
+h1{
+  .font(50px,red)
+}
+
+//混合7：多个相同名称的混合
+
+.mixin(@color){
+
+}
+.mixin(@color,@padding:2){
+
+}
+.mixin(@color,@padding:2,@margin:2){
+
+}

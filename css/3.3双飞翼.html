@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		.wrap{width: 100%;}
+		.main{
+			width: 100%;
+			height: 100px;
+			background: gold;
+			float:left;
+		}
+		.left,
+		.right{
+			width: 100px;
+			height: 100px;
+			background: red;
+			float:left;
+		}
+		.left{			
+			margin-left: -100%;
+		}
+		.right{
+			margin-left: -100px;
+		}
+		.wrap{
+			margin-left: 100px;
+			margin-right: 100px;
+			min-height:30px;	
+		}
+	</style>
+	</head>
+	<body>		
+			<div class="main">
+				<div class="wrap">主</div>
+			</div>
+			<div class="left">左</div>
+			<div class="right">右</div>
+		
+	</body>
+</html>

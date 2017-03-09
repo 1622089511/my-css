@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            height: 200px; width: 200px; border:1px solid orangered;
+            margin:20px auto;
+        }
+        #div1 span{
+            height: 20px; width: 20px; border-radius:50%;background: orange;display: block;
+        }
+        #div1:hover span{
+            animation:move 1s ease infinite 1s ;
+
+        }
+        @keyframes move{
+            0%{
+                transform:translateX(0);
+            }
+            25%{
+                transform:translateX(180px);
+            }
+            50%{
+                transform:translate(180px,180px);
+            }
+            75%{
+                transform:translate(0px,180px);
+            }
+            100%{
+                transform:translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <span></span>
+    </div>
+</body>
+<!--  animation-name:move;  动画方法名
+  animation-duration: 10s;      持续时间
+  animation-timing-function:ease-out;   动画快慢方式
+  animation-delay:.1s;             渲染延迟时间
+  animation-iteration-count:infinite;   重复次数
+  -->
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 20px auto;
+            border-radius: 100%;
+            -webkit-transition-property: -webkit-border-radius;
+            transition-property: border-radius;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            -webkit-transition-timing-function:linear;
+            transition-timing-function:linear;
+            -webkit-transition-delay: .2s;
+            transition-delay: .2s;
+        }
+        div:hover {
+            border-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!--transition-timing-function属性指的是过渡的“缓动函数”。
+    主要用来指定浏览器的过渡速度，以及过渡期间的操作进展情况，
+    其中要包括以下几种函数：linear ease ease-in ease-out ease-in-out -->
+    <div></div>
+</body>
+</html>

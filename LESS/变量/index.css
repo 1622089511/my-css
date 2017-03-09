@@ -1,0 +1,12 @@
+@charset "UTF-8";
+header h1 {
+  color: #800703;
+  background: gray;
+}
+.width {
+  width: 300px;
+}
+header {
+  background: url("https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png") no-repeat;
+  height: 300px;
+}

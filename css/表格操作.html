@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> new document </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <script type="text/javascript">
+
+        window.onload = function(){
+
+ 
+            var x=document.getElementsByTagName("tr");
+            for(i=0;i<x.length;i++)
+            {
+                bgcchange(x[i]);
+            }
+        }
+        function bgcchange(obj){
+            obj.onmouseover=function(){
+                obj.style.backgroundColor="#c55";
+            }
+            obj.onmouseout=function(){
+                obj.style.backgroundColor="#fff";
+            }
+        }
+
+
+
+        function addTr()
+        {
+            var pa=document.getElementById("table");
+            var row1=document.createElement("tr");
+            var td1=document.createElement("td");
+            td1.innerHTML="Number";
+            var td2=document.createElement("td");
+            td2.innerHTML="Name";
+            var td3=document.createElement("td");
+            td3.innerHTML="<a href='javascript:;' onclick='del(this)'>ɾ��</a>"
+            pa.appendChild(row1);
+            row1.appendChild(td1);
+            row1.appendChild(td2);
+            row1.appendChild(td3);
+        }
+        function del(obj)
+        {
+            var tr=obj.parentNode.parentNode;
+            tr.parentNode.removeChild(tr);
+        }
+
+
+    </script>
+</head>
+<body>
+<table border="1" width="50%" id="table">
+    <tr>
+        <th>ѧ��</th>
+        <th>����</th>
+        <th>����</th>
+    </tr>
+
+    <tr>
+        <td>xh001</td>
+        <td>��С��</td>
+        <td><a href="javascript:;" onclick="del(this)" >ɾ��</a></td>   
+    </tr>
+
+    <tr>
+        <td>xh002</td>
+        <td>��С��</td>
+        <td><a href="javascript:;" onclick="del(this)" >ɾ��</a></td>   
+    </tr>
+
+</table>
+<input type="button" value="���һ��" onclick="addTr()" />   
+</body>
+</html>

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@green: #800703;
+
+header{
+  h1{
+    color: @green;
+    background: gray;
+  }
+}
+//可以作为选择器和属性同时设置
+@gao:width;
+.@{gao}{
+    @{gao}:300px;
+}
+//作为URL的变量格式
+@imgurl:"https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/";
+header{
+  background: url("@{imgurl}bd_logo1_31bdc765.png") no-repeat;
+  height: 300px;
+}
